@@ -29,8 +29,8 @@ createPlatformsTable = """CREATE TABLE Platforms (
 
 createPricePlatformsCoinsTable = """CREATE TABLE Prices_platforms_coins (
                                     prices_id INTEGER NOT NULL UNIQUE PRIMARY KEY AUTOINCREMENT,
-                                    prices float,
-                                    dates, date,
+                                    price float,
+                                    date date,
                                     platform_id INTEGER,
                                     extract_id INTEGER,
                                     ticker_id varchar(255) NOT NULL,

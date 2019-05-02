@@ -6,17 +6,10 @@ class Coin:
         self.name = name
         self.coinId = coinId
         self.extractId = extractId
+        self.values =  (self.tickerId, self.name,self.coinId, self.extractId)
 
-    def insertIntoDb(self):
-        query = '''INSERT INTO Coins (ticker_id, name, coin_id, extract_id ) VALUES (?,?,?,?)'''
-        values = (self.tickerId, self.name,self.coinId, self.extractId)
-
-        conn = sqlite3.connect("DBProject.sql")
-        c = conn.cursor()
-        c.execute(query,values)
-        conn.commit()
         
-        
+    
         
 
 
