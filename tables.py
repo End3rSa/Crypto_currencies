@@ -107,9 +107,10 @@ def create_connection(db_file):
         return conn
     except Error as e:
         print(e)
-    return None
- 
-def main():
+    return None  
+
+
+if __name__=="__main__":
     conn=create_connection("DBProject.sql")    #le nom du fichier de la DB en " "
     # Arguments handling
     if len(sys.argv)==1: # no argument => create all tables
@@ -123,6 +124,3 @@ def main():
         else:
             print("""Wrong argument; only accepted arguments are "-d", "-r" or no argument""")
     
-
-if __name__=="__main__":
-    main()
